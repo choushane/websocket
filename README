@@ -1,0 +1,39 @@
+Install dependency package:
+
+    python setup.py install
+
+
+Auth public & provate key gen :
+
+    python keyGen.py
+
+
+Websocket-server:
+
+    server.py 
+
+    optional arguments:
+  	-h, --help            		show this help message and exit
+  	-p PORT, --port PORT  		Server listen port (default:9001)
+  	-ca CA_FILE, --ca-file CA_FILE 	Auth private key.
+  	-dic NAME_DICTIONARY, --name-dictionary NAME_DICTIONARY
+                        		Random name dictionary.
+
+    Unit Test : 
+    	python -m unittest discover websocket-server/tests
+
+
+Websocket-client:
+
+    connect.py 
+
+    positional arguments:
+  	ws_url                	websocket url. ex. ws://127.0.0.1:8888/
+
+    optional arguments:
+  	-h, --help            	show this help message and exit.
+  	-d DISPLAY_NAME, --display_name DISPLAY_NAME.
+                        	User display name
+  	-ca CA_FILE, --ca-file CA_FILE
+                        	Auth server public key.
+
